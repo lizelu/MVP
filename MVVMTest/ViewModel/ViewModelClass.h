@@ -6,6 +6,11 @@
 //  Copyright (c) 2015年 李泽鲁. All rights reserved.
 //
 
+//Kicking off network or database requests
+//Determining when information should be hidden or shown
+//Date and number formatting
+//Localization
+
 #import <Foundation/Foundation.h>
 
 @interface ViewModelClass : NSObject
