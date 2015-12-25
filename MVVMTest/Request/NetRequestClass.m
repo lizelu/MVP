@@ -68,6 +68,7 @@
         block(dic);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", [error description]);
         failureBlock();
     }];
     

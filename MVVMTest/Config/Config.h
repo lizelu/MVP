@@ -18,7 +18,7 @@ typedef void (^NetWorkBlock)(BOOL netConnetState);
 #define DDLog(xx, ...)  NSLog(@"%s(%d): " xx, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 
 //accessToken
-#define ACCESSTOKEN @"2.00NofgBD0L1k4p505b275991t6RNOB"
+#define ACCESSTOKEN @"2.00NofgBD0L1k4pc584f79cc48SKGdD"
 
 //请求公共微博的网络接口
 #define REQUESTPUBLICURL @"https://api.weibo.com/2/statuses/public_timeline.json"
