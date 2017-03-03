@@ -8,10 +8,7 @@
 至于团队协作不仅仅是有SVN或者Git这些版本控制工具就行的，至于如何在iOS开发中使用SVN,请参考之前的博客（[iOS开发之版本控制（SVN）](http://www.cnblogs.com/ludashi/p/4018245.html)）。一个团队可以高效的工作，本人觉得交流是最为重要的，团队中的每个人都比较和气，而且交流上没有什么障碍，交流在团队中最为重要。至于SVN怎么用，那都不是事儿！
 
 好了今天就以我写的一个Demo来浅谈一下iOS开发中的架构设计和团队协作，今天的咸蛋先到这儿，切入今天的话题。为了写今天的博客我花了点时间做了个工程，这个工程后台的接口用的新浪微博的API来进行测试的，在本文的后面也会跟上GitHub的分享链接。OK~说的高大上一些就是，仁者见仁智者见智，交流思想，共同学习。
-
-
-
-
+<br/><br/><br/><br/>
 ###一、小酌一下MVVM
 
 在这呢也不赘述什么是MVC,神马又是MVVM了,在百度上谷歌一下一抓一大把，在这儿就简单的提上一嘴。下面的Demo用的就是MVVM的架构模式。
@@ -23,7 +20,7 @@ View层，就是ViewController层，他的任务就是从ViewModel层获取数�
 上面对MVVM就先简单的这么一说，好好的理解并应用的话，还得实战。
 
 
-
+<br/><br/><br/><br/>
 
 ###二、关于工程中是否使用StoryBoard的论述
 
@@ -35,9 +32,9 @@ View层，就是ViewController层，他的任务就是从ViewModel层获取数�
 
 
 
-
+<br/><br/><br/><br/>
 ###三、实战MVVM（用Xcode创建的Group是虚拟的文件夹，为了便于维护，建议创建物理文件夹，然后再手动引入）
-
+<br/>
 ####1.MVVM的架构模式
 下面通过一个实例来体会一下MVVM架构模式，下面是该工程的一级目录如下，每层之间的交互是用Block的形式来实现的
 ![](http://images.cnitblog.com/blog/545446/201501/081659002811487.png)
@@ -60,7 +57,8 @@ View层，就是ViewController层，他的任务就是从ViewModel层获取数�
 
 　　　　　　8.ViewModel：存放各种业务逻辑和网络请求
       
-      
+    
+<br/><br/>
 ####2.详解Request
 Request负责网络请求的东西，具体如下：
 ![](http://images.cnitblog.com/blog/545446/201501/081707410003870.png)
@@ -215,7 +213,7 @@ NetRequestClass.m中的代码如下：
 @end
 ```
 
-
+<br/><br/>
 ####3.详解Config
 创建pch文件，和Config.h文件
 ![](http://images.cnitblog.com/blog/545446/201501/081716298438305.png)
@@ -283,7 +281,7 @@ typedef void (^NetWorkBlock)(BOOL netConnetState);
 
 #endif
 ```
-
+<br/><br/>
 ####4.详解资源文件Resource
 结构如下图：
 ![](http://images.cnitblog.com/blog/545446/201501/081718254846377.png)
@@ -291,7 +289,7 @@ typedef void (^NetWorkBlock)(BOOL netConnetState);
 Image中就存放各种图片（3x,2x等），InterfaceBuider里面就是放一些Xib和Storyboard文件，每个负责UI的开发人员负责一个Storyboard
 
  
-
+<br/><br/>
 ####5.详解Model
 本工程用的是请求公共微博接口我们需要在页面上现实用户的头像，用户名，发布日期，博文，已经隐式的用户ID和微博ID,文件目录结构如下：
 ![](http://images.cnitblog.com/blog/545446/201501/081724015157284.png)
@@ -318,6 +316,7 @@ PublicModel中的内容如下：
 
 @end
 ```
+<br/><br/>
 ####6.详解ViewModel层
 本层是最为重要的一层，下面是本层的详细截图，ViewModeClass是所有ViewMode的父类，其中存储着共同部分
 ![](http://images.cnitblog.com/blog/545446/201501/081727237652962.png)
@@ -507,16 +506,20 @@ PublicWeiboViewModel.m中的内容如下：
 @end
 ```
 
+<br/><br/>
 ####7.ViewController层
 ViewController层的目录结构如下：
 ![](http://images.cnitblog.com/blog/545446/201501/081732247816367.png)
 
+<br/><br/>
 ####8.storybord中的结构如下：
 ![](http://images.cnitblog.com/blog/545446/201501/081736471872201.png)
 
 运行的最终效果：
 ![](http://images.cnitblog.com/blog/545446/201501/081739565313089.png)
 
+<br/><br/>
 9.完整目录结构
+
 页面间的业务逻辑，和网络的请求数据是放在ViewModel层的，当然了这也不是绝对的，要灵活把握。我个人是特别喜欢编程的，因为编程灵活起来就会很有乐趣。
 ![](http://images.cnitblog.com/blog/545446/201501/081743324216698.png)
