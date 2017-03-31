@@ -35,7 +35,9 @@ View层，就是ViewController层，他的任务就是从ViewModel层获取数�
 <br/><br/><br/><br/>
 ### 三、实战MVVM（用Xcode创建的Group是虚拟的文件夹，为了便于维护，建议创建物理文件夹，然后再手动引入）
 <br/>
+
 #### 1.MVVM的架构模式
+
 下面通过一个实例来体会一下MVVM架构模式，下面是该工程的一级目录如下，每层之间的交互是用Block的形式来实现的
 ![](http://images.cnitblog.com/blog/545446/201501/081659002811487.png)
 
