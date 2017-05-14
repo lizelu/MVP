@@ -18,11 +18,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    //AFNetwork网络请求图片缓存策略
-    [UIButton setSharedImageCache:[UIButton sharedImageCache]];
-    [UIImageView setSharedImageCache:[UIImageView sharedImageCache]];
-    
-    
     
     return YES;
 }

@@ -10,7 +10,7 @@
 #define MVVMTest_PrefixHeader_pch
 
 #import"AFNetworking.h"
-#import "UIKit+AFNetworking.h"
+#import "UIImageView+WebCache.h"
 #import "Config.h"
 
 #import "NetRequestClass.h"

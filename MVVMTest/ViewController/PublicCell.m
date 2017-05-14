@@ -23,7 +23,7 @@
     _userName.text = publicModel.userName;
     _date.text = publicModel.date;
     _weiboText.text = publicModel.text;
-    [_headImageView setImageWithURL:publicModel.imageUrl];
+    [_headImageView sd_setImageWithURL:publicModel.imageUrl];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

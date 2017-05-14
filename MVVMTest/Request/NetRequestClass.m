@@ -20,31 +20,25 @@
  @return 是否可达
  */
 +(BOOL)netWorkReachabilityWithURLString:(NSString *) strUrl {
-    __block BOOL netState = NO;
-    
-    NSURL *baseURL = [NSURL URLWithString:strUrl];
-    
-    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:baseURL];
-    
-    NSOperationQueue *operationQueue = manager.operationQueue;
-    
-    [manager.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+    __block BOOL netState = YES;
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         switch (status) {
-            case AFNetworkReachabilityStatusReachableViaWWAN:
+            case AFNetworkReachabilityStatusNotReachable:
+            case AFNetworkReachabilityStatusUnknown:
+                netState = NO;
+                break;
             case AFNetworkReachabilityStatusReachableViaWiFi:
-                [operationQueue setSuspended:NO];
+            case AFNetworkReachabilityStatusReachableViaWWAN:
                 netState = YES;
                 break;
-            case AFNetworkReachabilityStatusNotReachable:
-                netState = NO;
+           
             default:
-                [operationQueue setSuspended:YES];
                 break;
         }
+        NSLog(@"Reachability: %@", AFStringFromNetworkReachabilityStatus(status));
     }];
     
-    [manager.reachabilityManager startMonitoring];
-    
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     return netState;
 }
 
@@ -69,22 +63,14 @@
                 WithErrorCodeBlock:(ErrorCodeBlock) errorBlock
                   WithFailureBlock:(FailureBlock) failureBlock
 {
-    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] init];
-    
-    AFHTTPRequestOperation *op = [manager GET:requestURLString parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
-        DDLog(@"%@", dic);
+    [[AFHTTPSessionManager manager] GET:requestURLString parameters:parameter progress:^(NSProgress * _Nonnull downloadProgress) {
         
-        block(dic);
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"%@", [error description]);
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        block(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        DDLog(@"%@",error.description);
         failureBlock();
     }];
-    
-    op.responseSerializer = [AFHTTPResponseSerializer serializer];
-    
-    [op start];
 }
 
 /**
@@ -102,27 +88,14 @@
                  WithErrorCodeBlock:(ErrorCodeBlock) errorBlock
                    WithFailureBlock:(FailureBlock) failureBlock
 {
-    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] init];
     
-    AFHTTPRequestOperation *op = [manager POST:requestURLString parameters:parameter success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
-        
-        DDLog(@"%@", dic);
-        
-        block(dic);
-        /***************************************
-         在这做判断如果有dic里有errorCode
-         调用errorBlock(dic)
-         没有errorCode则调用block(dic
-         ******************************/
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        failureBlock();
+    [[AFHTTPSessionManager manager] POST:requestURLString parameters:parameter constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        block(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+         failureBlock();
     }];
-    
-    op.responseSerializer = [AFHTTPResponseSerializer serializer];
-    
-    [op start];
 }
 
 

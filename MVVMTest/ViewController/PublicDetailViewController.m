@@ -23,7 +23,7 @@
     _userNameLabel.text = _publicModel.userName;
     _timeLabel.text = _publicModel.date;
     _textLable.text = _publicModel.text;
-    [_headImageView setImageWithURL:_publicModel.imageUrl];
+    [_headImageView sd_setImageWithURL:_publicModel.imageUrl];
     // Do any additional setup after loading the view.
 }
 
