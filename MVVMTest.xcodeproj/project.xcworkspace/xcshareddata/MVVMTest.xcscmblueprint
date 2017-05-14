@@ -9,7 +9,7 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B6DB291F-B07D-4CCC-8613-5EAFA936C44A",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "274A66C13315C41966315FFD8310049FE5AD6F1B" : "MVVM",
+    "274A66C13315C41966315FFD8310049FE5AD6F1B" : "MVVM\/",
     "59B0DD3A0DC0B86D2A06DD4B68CBD1C997876614" : ""
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "MVVMTest",

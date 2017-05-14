@@ -12,11 +12,14 @@
 
 @end
 
-
 @implementation NetRequestClass
-#pragma 监测网络的可链接性
-+ (BOOL) netWorkReachabilityWithURLString:(NSString *) strUrl
-{
+/**
+ 监测网络的可链接性
+
+ @param strUrl URL地址
+ @return 是否可达
+ */
++(BOOL)netWorkReachabilityWithURLString:(NSString *) strUrl {
     __block BOOL netState = NO;
     
     NSURL *baseURL = [NSURL URLWithString:strUrl];
@@ -45,19 +48,26 @@
     return netState;
 }
 
-
 /***************************************
  在这做判断如果有dic里有errorCode
  调用errorBlock(dic)
  没有errorCode则调用block(dic
  ******************************/
 
-#pragma --mark GET请求方式
-+ (void) NetRequestGETWithRequestURL: (NSString *) requestURLString
-                       WithParameter: (NSDictionary *) parameter
-                WithReturnValeuBlock: (ReturnValueBlock) block
-                  WithErrorCodeBlock: (ErrorCodeBlock) errorBlock
-                    WithFailureBlock: (FailureBlock) failureBlock
+/**
+ GET请求方式
+
+ @param requestURLString 请求的URL
+ @param parameter 参数
+ @param block 业务逻辑成功的block回调
+ @param errorBlock 业务错误的block回调
+ @param failureBlock 网络失败的block回调
+ */
++(void)NetRequestGETWithRequestURL:(NSString *) requestURLString
+                      WithParameter:(NSDictionary *) parameter
+              WithReturnValeuBlock:(ReturnValueBlock) block
+                WithErrorCodeBlock:(ErrorCodeBlock) errorBlock
+                  WithFailureBlock:(FailureBlock) failureBlock
 {
     AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] init];
     
@@ -75,16 +85,22 @@
     op.responseSerializer = [AFHTTPResponseSerializer serializer];
     
     [op start];
-    
 }
 
-#pragma --mark POST请求方式
-
-+ (void) NetRequestPOSTWithRequestURL: (NSString *) requestURLString
-                        WithParameter: (NSDictionary *) parameter
-                 WithReturnValeuBlock: (ReturnValueBlock) block
-                   WithErrorCodeBlock: (ErrorCodeBlock) errorBlock
-                     WithFailureBlock: (FailureBlock) failureBlock
+/**
+ POST请求方式
+ 
+ @param requestURLString 请求的URL
+ @param parameter 参数
+ @param block 业务逻辑成功的block回调
+ @param errorBlock 业务错误的block回调
+ @param failureBlock 网络失败的block回调
+ */
++(void)NetRequestPOSTWithRequestURL:(NSString *) requestURLString
+                      WithParameter:(NSDictionary *) parameter
+               WithReturnValeuBlock:(ReturnValueBlock) block
+                 WithErrorCodeBlock:(ErrorCodeBlock) errorBlock
+                   WithFailureBlock:(FailureBlock) failureBlock
 {
     AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] init];
     
@@ -107,10 +123,7 @@
     op.responseSerializer = [AFHTTPResponseSerializer serializer];
     
     [op start];
-
 }
-
-
 
 
 @end
