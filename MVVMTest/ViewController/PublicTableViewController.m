@@ -17,7 +17,7 @@
 @end
 
 @implementation PublicTableViewController
-
+#pragma mark - lift cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createViewModel];
@@ -29,6 +29,10 @@
 }
 
 #pragma mark - config
+
+/**
+ 创建ViewModel
+ */
 - (void)createViewModel {
     PublicWeiboViewModel *publicViewModel = [[PublicWeiboViewModel alloc] init];
     [publicViewModel setBlockWithReturnBlock:^(id returnValue) {
@@ -62,6 +66,8 @@
     [cell setValueWithDic:_publicModelArray[indexPath.row]];
     return cell;
 }
+
+#pragma mark - UITableViewDelegate
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     PublicModel *model = (PublicModel *)_publicModelArray[indexPath.row];

@@ -10,9 +10,10 @@
 #import "PublicDetailViewController.h"
 
 @implementation PublicWeiboViewModel
-
-//获取公共微博
-- (void) fetchPublicWeiBo {
+/**
+ 获取公共微博
+ */
+- (void)fetchPublicWeiBo {
     NSDictionary *parameter = @{TOKEN: ACCESSTOKEN,
                                 COUNT: @"100"};
     [NetRequestClass NetRequestGETWithRequestURL:REQUESTPUBLICURL WithParameter:parameter WithReturnValeuBlock:^(id returnValue) {
@@ -29,14 +30,14 @@
         DDLog(@"网络异常");
         
     }];
-    
 }
 
+/**
+ 获取到正确的数据，对正确的数据进行处理
 
-
-#pragma 获取到正确的数据，对正确的数据进行处理
--(void)fetchValueSuccessWithDic: (NSDictionary *) returnValue
-{
+ @param returnValue 返回成功后的值
+ */
+-(void)fetchValueSuccessWithDic: (NSDictionary *) returnValue {
     //对从后台获取的数据进行处理，然后传给ViewController层进行显示
     
     NSArray *statuses = returnValue[STATUSES];
@@ -66,25 +67,35 @@
         publicModel.cellHeight = [self countTextHeight:publicModel.text];
         
         [publicModelArray addObject:publicModel];
-        
     }
     
     self.returnBlock(publicModelArray);
 }
 
-#pragma 对ErrorCode进行处理
--(void) errorCodeWithDic: (NSDictionary *) errorDic
-{
+/**
+ 对ErrorCode进行处理
+
+ @param errorDic
+ */
+-(void) errorCodeWithDic: (NSDictionary *) errorDic {
     self.errorBlock(errorDic);
 }
 
-#pragma 对网路异常进行处理
+/**
+ 对网路异常进行处理
+ */
 -(void) netFailure {
     self.failureBlock();
 }
 
 
-#pragma 跳转到详情页面，如需网路请求的，可在此方法中添加相应的网络请求
+
+/**
+ 跳转到详情页面，如需网路请求的，可在此方法中添加相应的网络请求
+
+ @param publicModel 传到下一个页面的值
+ @param superController 上一个VC
+ */
 - (void)weiboDetailWithPublicModel:(PublicModel *) publicModel
                 WithViewController:(UIViewController *)superController
 {
@@ -96,6 +107,12 @@
     
 }
 
+/**
+ 计算博文高度
+
+ @param text
+ @return 高度
+ */
 - (CGFloat)countTextHeight:(NSString *) text {
     NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:text];
     NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];

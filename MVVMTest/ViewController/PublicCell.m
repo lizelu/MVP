@@ -13,13 +13,11 @@
 @property (strong, nonatomic) IBOutlet UILabel *date;
 @property (strong, nonatomic) IBOutlet UIImageView *headImageView;
 @property (strong, nonatomic) IBOutlet UITextView *weiboText;
-
 @end
 
 @implementation PublicCell
 
--(void) setValueWithDic : (PublicModel *) publicModel
-{
+- (void)setValueWithDic:(PublicModel *) publicModel {
     _userName.text = publicModel.userName;
     _date.text = publicModel.date;
     _weiboText.text = publicModel.text;
@@ -28,8 +26,6 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 @end

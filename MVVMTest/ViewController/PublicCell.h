@@ -10,7 +10,5 @@
 #import "PublicModel.h"
 
 @interface PublicCell : UITableViewCell
-
--(void) setValueWithDic : (PublicModel *) publicModel;
-
+- (void)setValueWithDic:(PublicModel *) publicModel;
 @end

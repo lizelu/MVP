@@ -13,18 +13,13 @@
 @property (strong, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 @property (strong, nonatomic) IBOutlet UITextView *textLable;
-
 @end
 
 @implementation PublicDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _userNameLabel.text = _publicModel.userName;
-    _timeLabel.text = _publicModel.date;
-    _textLable.text = _publicModel.text;
-    [_headImageView sd_setImageWithURL:_publicModel.imageUrl];
-    // Do any additional setup after loading the view.
+    [self setContent];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,14 +27,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+/**
+ 设置页面元素上的值
+ */
+- (void)setContent {
+    _userNameLabel.text = _publicModel.userName;
+    _timeLabel.text = _publicModel.date;
+    _textLable.text = _publicModel.text;
+    [_headImageView sd_setImageWithURL:_publicModel.imageUrl];
 }
-*/
 
 @end
