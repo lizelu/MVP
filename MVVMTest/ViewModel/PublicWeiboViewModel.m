@@ -12,11 +12,9 @@
 @implementation PublicWeiboViewModel
 
 //获取公共微博
--(void) fetchPublicWeiBo
-{
+- (void) fetchPublicWeiBo {
     NSDictionary *parameter = @{TOKEN: ACCESSTOKEN,
-                                COUNT: @"100"
-                                };
+                                COUNT: @"100"};
     [NetRequestClass NetRequestGETWithRequestURL:REQUESTPUBLICURL WithParameter:parameter WithReturnValeuBlock:^(id returnValue) {
         
         DDLog(@"%@", returnValue);
@@ -65,6 +63,7 @@
         publicModel.imageUrl = [NSURL URLWithString:statuses[i][USER][HEADIMAGEURL]];
         publicModel.userId = statuses[i][USER][UID];
         publicModel.weiboId = statuses[i][WEIBOID];
+        publicModel.cellHeight = [self countTextHeight:publicModel.text];
         
         [publicModelArray addObject:publicModel];
         
@@ -80,14 +79,14 @@
 }
 
 #pragma 对网路异常进行处理
--(void) netFailure
-{
+-(void) netFailure {
     self.failureBlock();
 }
 
 
 #pragma 跳转到详情页面，如需网路请求的，可在此方法中添加相应的网络请求
--(void) weiboDetailWithPublicModel: (PublicModel *) publicModel WithViewController:(UIViewController *)superController
+- (void)weiboDetailWithPublicModel:(PublicModel *) publicModel
+                WithViewController:(UIViewController *)superController
 {
     DDLog(@"%@,%@,%@",publicModel.userId,publicModel.weiboId,publicModel.text);
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
@@ -95,6 +94,18 @@
     detailController.publicModel = publicModel;
     [superController.navigationController pushViewController:detailController animated:YES];
     
+}
+
+- (CGFloat)countTextHeight:(NSString *) text {
+    NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:text];
+    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+    style.lineSpacing = 0;
+    UIFont *font = [UIFont systemFontOfSize:14];
+    [attributeString addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, text.length)];
+    [attributeString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, text.length)];
+    NSStringDrawingOptions options = NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading;
+    CGRect rect = [attributeString boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width - 80, CGFLOAT_MAX) options:options context:nil];
+    return rect.size.height + 150;
 }
 
 

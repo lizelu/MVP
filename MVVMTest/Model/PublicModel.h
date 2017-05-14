@@ -15,5 +15,6 @@
 @property (strong, nonatomic) NSURL *imageUrl;
 @property (strong, nonatomic) NSString *date;
 @property (strong, nonatomic) NSString *text;
+@property (assign, nonatomic) CGFloat cellHeight;
 
 @end
