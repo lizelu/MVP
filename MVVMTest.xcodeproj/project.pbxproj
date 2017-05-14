@@ -29,6 +29,7 @@
 		F4354CE71EC893B800632603 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F4354CD41EC893B800632603 /* UIImageView+HighlightedWebCache.m */; };
 		F4354CE81EC893B800632603 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F4354CD61EC893B800632603 /* UIImageView+WebCache.m */; };
 		F4354CE91EC893B800632603 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F4354CD81EC893B800632603 /* UIView+WebCacheOperation.m */; };
+		F4354CF11EC8AF9800632603 /* PublicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F4354CF01EC8AF9800632603 /* PublicCell.m */; };
 		F43A1C471A5BB91A00B327FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F43A1C461A5BB91A00B327FB /* main.m */; };
 		F43A1C4A1A5BB91A00B327FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F43A1C491A5BB91A00B327FB /* AppDelegate.m */; };
 		F43A1C4D1A5BB91A00B327FB /* MVVMTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F43A1C4B1A5BB91A00B327FB /* MVVMTest.xcdatamodeld */; };
@@ -42,7 +43,6 @@
 		F458B5291A5E2E1000C8A02E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F458B5271A5E2E1000C8A02E /* SVProgressHUD.m */; };
 		F458B52C1A5E333800C8A02E /* PublicWeiboViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F458B52B1A5E333800C8A02E /* PublicWeiboViewModel.m */; };
 		F458B52F1A5E428700C8A02E /* PublicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F458B52E1A5E428700C8A02E /* PublicTableViewController.m */; };
-		F458B5321A5E463500C8A02E /* PublicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F458B5311A5E463500C8A02E /* PublicCell.m */; };
 		F458B5351A5E469500C8A02E /* PublicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F458B5341A5E469500C8A02E /* PublicModel.m */; };
 		F458B5381A5E5AB800C8A02E /* PublicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F458B5371A5E5AB800C8A02E /* PublicDetailViewController.m */; };
 		F458B53C1A5E62FD00C8A02E /* Main1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F458B53B1A5E62FD00C8A02E /* Main1.storyboard */; };
@@ -109,6 +109,8 @@
 		F4354CD61EC893B800632603 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		F4354CD71EC893B800632603 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		F4354CD81EC893B800632603 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		F4354CEF1EC8AF9800632603 /* PublicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicCell.h; sourceTree = "<group>"; };
+		F4354CF01EC8AF9800632603 /* PublicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicCell.m; sourceTree = "<group>"; };
 		F43A1C411A5BB91A00B327FB /* MVVMTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43A1C451A5BB91A00B327FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F43A1C461A5BB91A00B327FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -134,8 +136,6 @@
 		F458B52B1A5E333800C8A02E /* PublicWeiboViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicWeiboViewModel.m; sourceTree = "<group>"; };
 		F458B52D1A5E428700C8A02E /* PublicTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicTableViewController.h; sourceTree = "<group>"; };
 		F458B52E1A5E428700C8A02E /* PublicTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicTableViewController.m; sourceTree = "<group>"; };
-		F458B5301A5E463500C8A02E /* PublicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicCell.h; sourceTree = "<group>"; };
-		F458B5311A5E463500C8A02E /* PublicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicCell.m; sourceTree = "<group>"; };
 		F458B5331A5E469500C8A02E /* PublicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicModel.h; sourceTree = "<group>"; };
 		F458B5341A5E469500C8A02E /* PublicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicModel.m; sourceTree = "<group>"; };
 		F458B5361A5E5AB800C8A02E /* PublicDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicDetailViewController.h; sourceTree = "<group>"; };
@@ -223,6 +223,15 @@
 				F4354CD81EC893B800632603 /* UIView+WebCacheOperation.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		F4354CEE1EC8AF9800632603 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F4354CEF1EC8AF9800632603 /* PublicCell.h */,
+				F4354CF01EC8AF9800632603 /* PublicCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F43A1C381A5BB91A00B327FB = {
@@ -391,10 +400,9 @@
 		F458B5391A5E5D8B00C8A02E /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				F4354CEE1EC8AF9800632603 /* View */,
 				F458B52D1A5E428700C8A02E /* PublicTableViewController.h */,
 				F458B52E1A5E428700C8A02E /* PublicTableViewController.m */,
-				F458B5301A5E463500C8A02E /* PublicCell.h */,
-				F458B5311A5E463500C8A02E /* PublicCell.m */,
 				F458B5361A5E5AB800C8A02E /* PublicDetailViewController.h */,
 				F458B5371A5E5AB800C8A02E /* PublicDetailViewController.m */,
 			);
@@ -524,10 +532,10 @@
 				F4354CDE1EC893B800632603 /* SDWebImageDecoder.m in Sources */,
 				F4354CAC1EC8910F00632603 /* AFNetworkReachabilityManager.m in Sources */,
 				F458B5291A5E2E1000C8A02E /* SVProgressHUD.m in Sources */,
+				F4354CF11EC8AF9800632603 /* PublicCell.m in Sources */,
 				F4354CE21EC893B800632603 /* SDWebImagePrefetcher.m in Sources */,
 				F4354CE81EC893B800632603 /* UIImageView+WebCache.m in Sources */,
 				F43A1CBF1A5BC94B00B327FB /* NetRequestClass.m in Sources */,
-				F458B5321A5E463500C8A02E /* PublicCell.m in Sources */,
 				F458B5351A5E469500C8A02E /* PublicModel.m in Sources */,
 				F4354CE41EC893B800632603 /* UIImage+GIF.m in Sources */,
 				F4354CE61EC893B800632603 /* UIImage+WebP.m in Sources */,
