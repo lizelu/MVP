@@ -14,8 +14,7 @@
  获取公共微博
  */
 - (void)fetchPublicWeiBo {
-    NSDictionary *parameter = @{TOKEN: ACCESSTOKEN,
-                                COUNT: @"100"};
+    NSDictionary *parameter = @{COUNT: @"100"};
     [NetRequestClass NetRequestGETWithRequestURL:REQUESTPUBLICURL WithParameter:parameter WithReturnValeuBlock:^(id returnValue) {
         
         DDLog(@"%@", returnValue);

@@ -63,7 +63,9 @@
                 WithErrorCodeBlock:(ErrorCodeBlock) errorBlock
                   WithFailureBlock:(FailureBlock) failureBlock
 {
-    [[AFHTTPSessionManager manager] GET:requestURLString parameters:parameter progress:^(NSProgress * _Nonnull downloadProgress) {
+    NSMutableDictionary *allParameter = [[NSMutableDictionary alloc] initWithDictionary:parameter];
+    [allParameter setValue:ACCESSTOKEN forKey:TOKEN];
+    [[AFHTTPSessionManager manager] GET:requestURLString parameters:allParameter progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         block(responseObject);
