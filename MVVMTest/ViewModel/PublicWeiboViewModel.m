@@ -20,10 +20,6 @@
         DDLog(@"%@", returnValue);
         [self fetchValueSuccessWithDic:returnValue];
         
-    } WithErrorCodeBlock:^(id errorCode) {
-        DDLog(@"%@", errorCode);
-        [self errorCodeWithDic:errorCode];
-        
     } WithFailureBlock:^{
         [self netFailure];
         DDLog(@"网络异常");

@@ -54,13 +54,11 @@
  @param requestURLString 请求的URL
  @param parameter 参数
  @param block 业务逻辑成功的block回调
- @param errorBlock 业务错误的block回调
  @param failureBlock 网络失败的block回调
  */
 +(void)NetRequestGETWithRequestURL:(NSString *) requestURLString
                       WithParameter:(NSDictionary *) parameter
               WithReturnValeuBlock:(ReturnValueBlock) block
-                WithErrorCodeBlock:(ErrorCodeBlock) errorBlock
                   WithFailureBlock:(FailureBlock) failureBlock
 {
     NSMutableDictionary *allParameter = [[NSMutableDictionary alloc] initWithDictionary:parameter];
@@ -81,13 +79,11 @@
  @param requestURLString 请求的URL
  @param parameter 参数
  @param block 业务逻辑成功的block回调
- @param errorBlock 业务错误的block回调
  @param failureBlock 网络失败的block回调
  */
 +(void)NetRequestPOSTWithRequestURL:(NSString *) requestURLString
                       WithParameter:(NSDictionary *) parameter
                WithReturnValeuBlock:(ReturnValueBlock) block
-                 WithErrorCodeBlock:(ErrorCodeBlock) errorBlock
                    WithFailureBlock:(FailureBlock) failureBlock
 {
     

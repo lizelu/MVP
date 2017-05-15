@@ -17,14 +17,12 @@
 +(void)NetRequestPOSTWithRequestURL:(NSString *) requestURLString
                       WithParameter:(NSDictionary *) parameter
                WithReturnValeuBlock:(ReturnValueBlock) block
-                 WithErrorCodeBlock:(ErrorCodeBlock) errorBlock
                    WithFailureBlock:(FailureBlock) failureBlock;
 
 #pragma GET请求
 +(void)NetRequestGETWithRequestURL:(NSString *) requestURLString
                      WithParameter:(NSDictionary *) parameter
               WithReturnValeuBlock:(ReturnValueBlock) block
-                WithErrorCodeBlock:(ErrorCodeBlock) errorBlock
                   WithFailureBlock:(FailureBlock) failureBlock;
 
 @end
