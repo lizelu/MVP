@@ -33,12 +33,12 @@
 		F43A1C471A5BB91A00B327FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F43A1C461A5BB91A00B327FB /* main.m */; };
 		F43A1C4A1A5BB91A00B327FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F43A1C491A5BB91A00B327FB /* AppDelegate.m */; };
 		F43A1C4D1A5BB91A00B327FB /* MVVMTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F43A1C4B1A5BB91A00B327FB /* MVVMTest.xcdatamodeld */; };
-		F43A1C551A5BB91A00B327FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43A1C541A5BB91A00B327FB /* Images.xcassets */; };
 		F43A1C641A5BB91A00B327FB /* MVVMTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F43A1C631A5BB91A00B327FB /* MVVMTestTests.m */; };
 		F43A1CA21A5BBB1000B327FB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43A1C731A5BBB1000B327FB /* LaunchScreen.xib */; };
 		F43A1CA31A5BBB1000B327FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43A1C741A5BBB1000B327FB /* Main.storyboard */; };
 		F43A1CBF1A5BC94B00B327FB /* NetRequestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F43A1CBE1A5BC94B00B327FB /* NetRequestClass.m */; };
 		F4541C5E1EC944E40089A6B0 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = F4541C5D1EC944E40089A6B0 /* Tools.m */; };
+		F4541C611EC947240089A6B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4541C601EC947240089A6B0 /* Images.xcassets */; };
 		F458B5231A5E2A1500C8A02E /* ViewModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F458B5221A5E2A1500C8A02E /* ViewModelClass.m */; };
 		F458B5281A5E2E1000C8A02E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F458B5251A5E2E1000C8A02E /* SVProgressHUD.bundle */; };
 		F458B5291A5E2E1000C8A02E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F458B5271A5E2E1000C8A02E /* SVProgressHUD.m */; };
@@ -118,7 +118,6 @@
 		F43A1C481A5BB91A00B327FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F43A1C491A5BB91A00B327FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F43A1C4C1A5BB91A00B327FB /* MVVMTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MVVMTest.xcdatamodel; sourceTree = "<group>"; };
-		F43A1C541A5BB91A00B327FB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F43A1C5D1A5BB91A00B327FB /* MVVMTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43A1C621A5BB91A00B327FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F43A1C631A5BB91A00B327FB /* MVVMTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMTestTests.m; sourceTree = "<group>"; };
@@ -130,6 +129,7 @@
 		F43A1CBE1A5BC94B00B327FB /* NetRequestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetRequestClass.m; sourceTree = "<group>"; };
 		F4541C5C1EC944E40089A6B0 /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
 		F4541C5D1EC944E40089A6B0 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
+		F4541C601EC947240089A6B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F458B5211A5E2A1500C8A02E /* ViewModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModelClass.h; sourceTree = "<group>"; };
 		F458B5221A5E2A1500C8A02E /* ViewModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModelClass.m; sourceTree = "<group>"; };
 		F458B5251A5E2E1000C8A02E /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
@@ -268,7 +268,6 @@
 				F43A1CA01A5BBB1000B327FB /* ViewModel */,
 				F43A1C481A5BB91A00B327FB /* AppDelegate.h */,
 				F43A1C491A5BB91A00B327FB /* AppDelegate.m */,
-				F43A1C541A5BB91A00B327FB /* Images.xcassets */,
 				F43A1C4B1A5BB91A00B327FB /* MVVMTest.xcdatamodeld */,
 				F43A1C441A5BB91A00B327FB /* Supporting Files */,
 			);
@@ -322,17 +321,10 @@
 		F43A1C701A5BBB1000B327FB /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				F43A1C711A5BBB1000B327FB /* Images */,
+				F4541C5F1EC947240089A6B0 /* Image */,
 				F43A1C721A5BBB1000B327FB /* InterfaceBuilder */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		F43A1C711A5BBB1000B327FB /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		F43A1C721A5BBB1000B327FB /* InterfaceBuilder */ = {
@@ -390,6 +382,14 @@
 				F43A1CBE1A5BC94B00B327FB /* NetRequestClass.m */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		F4541C5F1EC947240089A6B0 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				F4541C601EC947240089A6B0 /* Images.xcassets */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		F458B5241A5E2E1000C8A02E /* SVProgressHUD */ = {
@@ -504,9 +504,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F458B53C1A5E62FD00C8A02E /* Main1.storyboard in Resources */,
-				F43A1C551A5BB91A00B327FB /* Images.xcassets in Resources */,
 				F43A1CA21A5BBB1000B327FB /* LaunchScreen.xib in Resources */,
 				F43A1CA31A5BBB1000B327FB /* Main.storyboard in Resources */,
+				F4541C611EC947240089A6B0 /* Images.xcassets in Resources */,
 				F458B53E1A5E630A00C8A02E /* Main2.storyboard in Resources */,
 				F458B5281A5E2E1000C8A02E /* SVProgressHUD.bundle in Resources */,
 			);

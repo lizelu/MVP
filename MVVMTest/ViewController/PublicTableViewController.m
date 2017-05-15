@@ -78,4 +78,6 @@
     PublicWeiboViewModel *publicViewModel = [[PublicWeiboViewModel alloc] init];
     [publicViewModel weiboDetailWithPublicModel:_publicModelArray[indexPath.row] WithViewController:self];
 }
+
+
 @end
