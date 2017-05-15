@@ -12,7 +12,7 @@
 #import"AFNetworking.h"
 #import "UIImageView+WebCache.h"
 #import "Config.h"
-
+#import "Tools.h"
 #import "NetRequestClass.h"
 #import "SVProgressHUD.h"
 #endif

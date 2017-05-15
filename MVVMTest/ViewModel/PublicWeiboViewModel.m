@@ -64,8 +64,7 @@
         publicModel.imageUrl = [NSURL URLWithString:statuses[i][USER][HEADIMAGEURL]];
         publicModel.userId = statuses[i][USER][UID];
         publicModel.weiboId = statuses[i][WEIBOID];
-        publicModel.cellHeight = [self countTextHeight:publicModel.text];
-        
+        publicModel.cellHeight = [Tools countTextHeight:publicModel.text width:80 font:14] + 150;
         [publicModelArray addObject:publicModel];
     }
     
@@ -106,24 +105,4 @@
     [superController.navigationController pushViewController:detailController animated:YES];
     
 }
-
-/**
- 计算博文高度
-
- @param text
- @return 高度
- */
-- (CGFloat)countTextHeight:(NSString *) text {
-    NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:text];
-    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
-    style.lineSpacing = 0;
-    UIFont *font = [UIFont systemFontOfSize:14];
-    [attributeString addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, text.length)];
-    [attributeString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, text.length)];
-    NSStringDrawingOptions options = NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading;
-    CGRect rect = [attributeString boundingRectWithSize:CGSizeMake([UIScreen mainScreen].bounds.size.width - 80, CGFLOAT_MAX) options:options context:nil];
-    return rect.size.height + 150;
-}
-
-
 @end

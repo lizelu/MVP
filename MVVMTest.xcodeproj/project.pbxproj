@@ -38,6 +38,7 @@
 		F43A1CA21A5BBB1000B327FB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F43A1C731A5BBB1000B327FB /* LaunchScreen.xib */; };
 		F43A1CA31A5BBB1000B327FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43A1C741A5BBB1000B327FB /* Main.storyboard */; };
 		F43A1CBF1A5BC94B00B327FB /* NetRequestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F43A1CBE1A5BC94B00B327FB /* NetRequestClass.m */; };
+		F4541C5E1EC944E40089A6B0 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = F4541C5D1EC944E40089A6B0 /* Tools.m */; };
 		F458B5231A5E2A1500C8A02E /* ViewModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F458B5221A5E2A1500C8A02E /* ViewModelClass.m */; };
 		F458B5281A5E2E1000C8A02E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F458B5251A5E2E1000C8A02E /* SVProgressHUD.bundle */; };
 		F458B5291A5E2E1000C8A02E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F458B5271A5E2E1000C8A02E /* SVProgressHUD.m */; };
@@ -127,6 +128,8 @@
 		F43A1CB81A5BC15C00B327FB /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		F43A1CBD1A5BC94B00B327FB /* NetRequestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetRequestClass.h; sourceTree = "<group>"; };
 		F43A1CBE1A5BC94B00B327FB /* NetRequestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetRequestClass.m; sourceTree = "<group>"; };
+		F4541C5C1EC944E40089A6B0 /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		F4541C5D1EC944E40089A6B0 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
 		F458B5211A5E2A1500C8A02E /* ViewModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModelClass.h; sourceTree = "<group>"; };
 		F458B5221A5E2A1500C8A02E /* ViewModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModelClass.m; sourceTree = "<group>"; };
 		F458B5251A5E2E1000C8A02E /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
@@ -346,6 +349,8 @@
 		F43A1C751A5BBB1000B327FB /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F4541C5C1EC944E40089A6B0 /* Tools.h */,
+				F4541C5D1EC944E40089A6B0 /* Tools.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -532,6 +537,7 @@
 				F4354CDE1EC893B800632603 /* SDWebImageDecoder.m in Sources */,
 				F4354CAC1EC8910F00632603 /* AFNetworkReachabilityManager.m in Sources */,
 				F458B5291A5E2E1000C8A02E /* SVProgressHUD.m in Sources */,
+				F4541C5E1EC944E40089A6B0 /* Tools.m in Sources */,
 				F4354CF11EC8AF9800632603 /* PublicCell.m in Sources */,
 				F4354CE21EC893B800632603 /* SDWebImagePrefetcher.m in Sources */,
 				F4354CE81EC893B800632603 /* UIImageView+WebCache.m in Sources */,
