@@ -87,8 +87,6 @@
     self.failureBlock();
 }
 
-
-
 /**
  跳转到详情页面，如需网路请求的，可在此方法中添加相应的网络请求
 
@@ -105,4 +103,6 @@
     [superController.navigationController pushViewController:detailController animated:YES];
     
 }
+
+
 @end
