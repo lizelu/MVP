@@ -27,7 +27,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
 /**
  设置页面元素上的值
  */

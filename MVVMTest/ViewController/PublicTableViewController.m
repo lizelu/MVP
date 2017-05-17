@@ -11,9 +11,7 @@
 #import "PublicCell.h"
 
 @interface PublicTableViewController ()
-
 @property (strong, nonatomic) NSArray *publicModelArray;
-
 @end
 
 @implementation PublicTableViewController

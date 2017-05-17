@@ -8,10 +8,6 @@
 
 #import "NetRequestClass.h"
 
-@interface NetRequestClass ()
-
-@end
-
 @implementation NetRequestClass
 /**
  监测网络的可链接性
