@@ -222,6 +222,7 @@ NetRequestClass.m中的代码如下：
 创建pch文件，和Config.h文件
 
 <img src="http://images.cnitblog.com/blog/545446/201501/081716298438305.png" width="400"/>
+
 ```Objective-C
 //
 //  PrefixHeader.pch
