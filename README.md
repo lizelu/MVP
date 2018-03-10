@@ -27,6 +27,7 @@ View层，就是ViewController层，他的任务就是从ViewModel层获取数�
 从网上经常看到说不推荐使用StoryBoard或者Xib,推荐用纯代码手写。个人认为这种观点是和苹果设计StoryBoard的初衷相悖的，在我做过的项目中是以StoryBoard为主，xib为辅，然后用代码整合每个StoryBoard.
 
 举一个用Storyboard好处的例子就OK了，给控件添加约束，如果用Storyboard完成那是分分秒的事情，而用代码的添加约束的话是何等的恶心，纯代码写的话会把大量的时间花在写UI上，而且技术含量是比较低的，这个个人认为没什么必要。在团队合作中负责UI开发的小伙伴只需没人负责一个Storyboard,各开发各的，用SVN提交时把下面的勾（如下图）去掉即可，这样用Storyboard是没有问题的。然后再用代码进行整合就OK了。如果你在你的工程中加入了新的资源文件的话，用XCode自带的SVN提交的话需要吧Project Setting文件一并提交。
+
 <img src="http://images.cnitblog.com/blog/545446/201501/081654178755395.png" width="400"/>
 
 
@@ -63,6 +64,7 @@ View层，就是ViewController层，他的任务就是从ViewModel层获取数�
 <br/><br/>
 #### 2.详解Request
 Request负责网络请求的东西，具体如下：
+
 <img src="http://images.cnitblog.com/blog/545446/201501/081707410003870.png" width="400"/>
 
 NetRequestClass是存放网络请求的代码，本工程用的AF，因为本工程只是一个Demo,所以就只封装了监测网络状态，GET请求，POST请求方法，根据现实需要，还可以封装上传下载等类方法。
@@ -218,6 +220,7 @@ NetRequestClass.m中的代码如下：
 <br/><br/>
 #### 3.详解Config
 创建pch文件，和Config.h文件
+
 <img src="http://images.cnitblog.com/blog/545446/201501/081716298438305.png" width="400"/>
 ```Objective-C
 //
