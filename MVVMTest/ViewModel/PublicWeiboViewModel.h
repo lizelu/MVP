@@ -8,15 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import "PublicCellViewModel.h"
+typedef NS_ENUM (NSInteger, WeboRequsetType) {
+    ListRequest,
+    Other
+};
+typedef void (^ReturnValueBlockType) (id returnValue, WeboRequsetType);
 @interface PublicWeiboViewModel : NSObject
 
-@property (copy, nonatomic) ReturnValueBlock returnBlock;
+@property (copy, nonatomic) ReturnValueBlockType returnBlock;
 @property (copy, nonatomic) ErrorCodeBlock errorBlock;
 @property (copy, nonatomic) FailureBlock failureBlock;
 
 
 // 传入交互的Block块
-- (void)setBlockWithReturnBlock: (ReturnValueBlock) returnBlock
+- (void)setBlockWithReturnBlock: (ReturnValueBlockType) returnBlock
                  WithErrorBlock: (ErrorCodeBlock) errorBlock
                WithFailureBlock: (FailureBlock) failureBlock;
 /**

@@ -9,10 +9,12 @@
 #import "PublicDetailViewController.h"
 
 @interface PublicDetailViewController ()
+
 @property (strong, nonatomic) IBOutlet UIImageView *headImageView;
 @property (strong, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 @property (strong, nonatomic) IBOutlet UITextView *textLable;
+
 @end
 
 @implementation PublicDetailViewController
@@ -31,10 +33,10 @@
  设置页面元素上的值
  */
 - (void)setContent {
-    _userNameLabel.text = _cellItem.userName;
-    _timeLabel.text = _cellItem.date;
-    _textLable.text = _cellItem.text;
-    [_headImageView sd_setImageWithURL:_cellItem.imageUrl];
+    _userNameLabel.text = _cellViewModel.userName;
+    _timeLabel.text = _cellViewModel.date;
+    _textLable.text = _cellViewModel.text;
+    [_headImageView sd_setImageWithURL:_cellViewModel.imageUrl];
 }
 
 @end

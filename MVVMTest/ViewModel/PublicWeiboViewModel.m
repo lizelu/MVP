@@ -12,7 +12,7 @@
 @implementation PublicWeiboViewModel
 
 #pragma 接收传过来的block
-- (void)setBlockWithReturnBlock: (ReturnValueBlock) returnBlock
+- (void)setBlockWithReturnBlock: (ReturnValueBlockType) returnBlock
                  WithErrorBlock: (ErrorCodeBlock) errorBlock
                WithFailureBlock: (FailureBlock) failureBlock
 {
@@ -50,7 +50,7 @@
         PublicCellViewModel *cellViewModel = [[PublicCellViewModel alloc] initWithModel:publicModelArray[i]];
         [cellViewModels addObject:cellViewModel];
     }
-    self.returnBlock(cellViewModels);
+    self.returnBlock(cellViewModels, ListRequest);
 }
 
 /**

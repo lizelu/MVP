@@ -10,5 +10,7 @@
 #include "PublicCellViewModel.h"
 
 @interface PublicDetailViewController : UIViewController
-@property (strong, nonatomic) PublicCellViewModel *cellItem;
+
+@property (strong, nonatomic) PublicCellViewModel *cellViewModel;
+
 @end

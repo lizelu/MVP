@@ -23,9 +23,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFm-Nn-jsZ">
-                                <rect key="frame" x="149" y="155" width="77" height="30"/>
+                                <rect key="frame" x="142" y="155" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="查看共微博"/>
+                                <state key="normal" title="查看公共微博"/>
                                 <connections>
                                     <segue destination="hvi-o9-1Ab" kind="show" id="vdD-ez-YcS"/>
                                 </connections>
