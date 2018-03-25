@@ -10,9 +10,9 @@
 #import "PublicCellViewModel.h"
 @interface PublicWeiboViewModel : NSObject
 
-@property (strong, nonatomic) ReturnValueBlock returnBlock;
-@property (strong, nonatomic) ErrorCodeBlock errorBlock;
-@property (strong, nonatomic) FailureBlock failureBlock;
+@property (copy, nonatomic) ReturnValueBlock returnBlock;
+@property (copy, nonatomic) ErrorCodeBlock errorBlock;
+@property (copy, nonatomic) FailureBlock failureBlock;
 
 
 // 传入交互的Block块

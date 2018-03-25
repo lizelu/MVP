@@ -6,19 +6,13 @@
 //  Copyright (c) 2015年 李泽鲁. All rights reserved.
 //
 
-//职责：
-//Kicking off network or database requests
-//Determining when information should be hidden or shown
-//Date and number formatting
-//Localization
-
 #import <Foundation/Foundation.h>
 
 @interface SuperModelClass : NSObject
 
-@property (strong, nonatomic) ReturnValueBlock returnBlock;
-@property (strong, nonatomic) ErrorCodeBlock errorBlock;
-@property (strong, nonatomic) FailureBlock failureBlock;
+@property (copy, nonatomic) ReturnValueBlock returnBlock;
+@property (copy, nonatomic) ErrorCodeBlock errorBlock;
+@property (copy, nonatomic) FailureBlock failureBlock;
 
 
 // 传入交互的Block块

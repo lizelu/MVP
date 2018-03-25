@@ -37,10 +37,4 @@
     return self;
 }
 
-- (void)dealloc
-{
-    DDLog(@"PublicCellViewModel - 释放");
-}
-
-
 @end
