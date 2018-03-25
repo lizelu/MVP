@@ -31,10 +31,10 @@
  设置页面元素上的值
  */
 - (void)setContent {
-    _userNameLabel.text = _publicModel.userName;
-    _timeLabel.text = _publicModel.date;
-    _textLable.text = _publicModel.text;
-    [_headImageView sd_setImageWithURL:_publicModel.imageUrl];
+    _userNameLabel.text = _cellItem.userName;
+    _timeLabel.text = _cellItem.date;
+    _textLable.text = _cellItem.text;
+    [_headImageView sd_setImageWithURL:_cellItem.imageUrl];
 }
 
 @end

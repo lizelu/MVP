@@ -9,19 +9,21 @@
 #import "PublicCell.h"
 
 @interface PublicCell ()
+
 @property (strong, nonatomic) IBOutlet UILabel *userName;
 @property (strong, nonatomic) IBOutlet UILabel *date;
 @property (strong, nonatomic) IBOutlet UIImageView *headImageView;
 @property (strong, nonatomic) IBOutlet UITextView *weiboText;
+
 @end
 
 @implementation PublicCell
 
-- (void)setValueWithDic:(PublicModel *) publicModel {
-    _userName.text = publicModel.userName;
-    _date.text = publicModel.date;
-    _weiboText.text = publicModel.text;
-    [_headImageView sd_setImageWithURL:publicModel.imageUrl];
+- (void)bindCellViewModel:(PublicCellViewModel *) cellViewModel; {
+    _userName.text = cellViewModel.userName;
+    _date.text = cellViewModel.date;
+    _weiboText.text = cellViewModel.text;
+    [_headImageView sd_setImageWithURL:cellViewModel.imageUrl];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -6,16 +6,8 @@
 //  Copyright (c) 2015年 李泽鲁. All rights reserved.
 //
 
-#import "ViewModelClass.h"
-@implementation ViewModelClass
-
-#pragma 获取网络可到达状态
-- (void)netWorkStateWithNetConnectBlock:(NetWorkBlock)
-             netConnectBlock WithURlStr:(NSString *) strURl;
-{
-    BOOL netState = [NetRequestClass netWorkReachabilityWithURLString:strURl];
-    netConnectBlock(netState);
-}
+#import "SuperModelClass.h"
+@implementation SuperModelClass
 
 #pragma 接收传过来的block
 - (void)setBlockWithReturnBlock: (ReturnValueBlock) returnBlock

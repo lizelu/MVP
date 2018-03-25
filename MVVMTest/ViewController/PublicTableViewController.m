@@ -9,9 +9,12 @@
 #import "PublicTableViewController.h"
 #import "PublicWeiboViewModel.h"
 #import "PublicCell.h"
+#import "PublicDetailViewController.h"
 
 @interface PublicTableViewController ()
-@property (strong, nonatomic) NSArray *publicModelArray;
+
+@property (copy, nonatomic) NSArray<PublicCellViewModel *> *publicModelArray;
+
 @end
 
 @implementation PublicTableViewController
@@ -61,20 +64,39 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     PublicCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PublicCell" forIndexPath:indexPath];
-    [cell setValueWithDic:_publicModelArray[indexPath.row]];
+    [cell bindCellViewModel:_publicModelArray[indexPath.row]];
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    PublicModel *model = (PublicModel *)_publicModelArray[indexPath.row];
-    return model.cellHeight;
+    PublicCellViewModel *cellViewModel = _publicModelArray[indexPath.row];
+    return cellViewModel.cellHeight;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    PublicWeiboViewModel *publicViewModel = [[PublicWeiboViewModel alloc] init];
-    [publicViewModel weiboDetailWithPublicModel:_publicModelArray[indexPath.row] WithViewController:self];
+    
+    [self weiboDetailWithPublicModel:_publicModelArray[indexPath.row]];
+}
+
+/**
+ 跳转到详情页面，如需网路请求的，可在此方法中添加相应的网络请求
+ 
+ @param publicModel 传到下一个页面的值
+ @param superController 上一个VC
+ */
+- (void)weiboDetailWithPublicModel:(PublicCellViewModel *) cellViewModel
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    PublicDetailViewController *detailController = [storyboard instantiateViewControllerWithIdentifier:@"PublicDetailViewController"];
+    detailController.cellItem = cellViewModel;
+    [self.navigationController pushViewController:detailController animated:YES];
+}
+
+- (void)dealloc
+{
+    DDLog(@"PublicTableViewController - 释放");
 }
 
 

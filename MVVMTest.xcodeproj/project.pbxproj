@@ -39,7 +39,7 @@
 		F43A1CBF1A5BC94B00B327FB /* NetRequestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F43A1CBE1A5BC94B00B327FB /* NetRequestClass.m */; };
 		F4541C5E1EC944E40089A6B0 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = F4541C5D1EC944E40089A6B0 /* Tools.m */; };
 		F4541C611EC947240089A6B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4541C601EC947240089A6B0 /* Images.xcassets */; };
-		F458B5231A5E2A1500C8A02E /* ViewModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F458B5221A5E2A1500C8A02E /* ViewModelClass.m */; };
+		F458B5231A5E2A1500C8A02E /* SuperModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F458B5221A5E2A1500C8A02E /* SuperModelClass.m */; };
 		F458B5281A5E2E1000C8A02E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F458B5251A5E2E1000C8A02E /* SVProgressHUD.bundle */; };
 		F458B5291A5E2E1000C8A02E /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F458B5271A5E2E1000C8A02E /* SVProgressHUD.m */; };
 		F458B52C1A5E333800C8A02E /* PublicWeiboViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F458B52B1A5E333800C8A02E /* PublicWeiboViewModel.m */; };
@@ -48,6 +48,8 @@
 		F458B5381A5E5AB800C8A02E /* PublicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F458B5371A5E5AB800C8A02E /* PublicDetailViewController.m */; };
 		F458B53C1A5E62FD00C8A02E /* Main1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F458B53B1A5E62FD00C8A02E /* Main1.storyboard */; };
 		F458B53E1A5E630A00C8A02E /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F458B53D1A5E630A00C8A02E /* Main2.storyboard */; };
+		F459D5232067C3030062BD05 /* PublicCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F459D5222067C3030062BD05 /* PublicCellViewModel.m */; };
+		F459D5262067C8F10062BD05 /* PublicListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F459D5252067C8F10062BD05 /* PublicListModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,8 +132,8 @@
 		F4541C5C1EC944E40089A6B0 /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
 		F4541C5D1EC944E40089A6B0 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
 		F4541C601EC947240089A6B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F458B5211A5E2A1500C8A02E /* ViewModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModelClass.h; sourceTree = "<group>"; };
-		F458B5221A5E2A1500C8A02E /* ViewModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModelClass.m; sourceTree = "<group>"; };
+		F458B5211A5E2A1500C8A02E /* SuperModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperModelClass.h; sourceTree = "<group>"; };
+		F458B5221A5E2A1500C8A02E /* SuperModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperModelClass.m; sourceTree = "<group>"; };
 		F458B5251A5E2E1000C8A02E /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		F458B5261A5E2E1000C8A02E /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		F458B5271A5E2E1000C8A02E /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
@@ -145,6 +147,10 @@
 		F458B5371A5E5AB800C8A02E /* PublicDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicDetailViewController.m; sourceTree = "<group>"; };
 		F458B53B1A5E62FD00C8A02E /* Main1.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main1.storyboard; sourceTree = "<group>"; };
 		F458B53D1A5E630A00C8A02E /* Main2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main2.storyboard; sourceTree = "<group>"; };
+		F459D5212067C3030062BD05 /* PublicCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicCellViewModel.h; sourceTree = "<group>"; };
+		F459D5222067C3030062BD05 /* PublicCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicCellViewModel.m; sourceTree = "<group>"; };
+		F459D5242067C8F10062BD05 /* PublicListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicListModel.h; sourceTree = "<group>"; };
+		F459D5252067C8F10062BD05 /* PublicListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicListModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +320,10 @@
 			children = (
 				F458B5331A5E469500C8A02E /* PublicModel.h */,
 				F458B5341A5E469500C8A02E /* PublicModel.m */,
+				F459D5242067C8F10062BD05 /* PublicListModel.h */,
+				F459D5252067C8F10062BD05 /* PublicListModel.m */,
+				F458B5211A5E2A1500C8A02E /* SuperModelClass.h */,
+				F458B5221A5E2A1500C8A02E /* SuperModelClass.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -369,8 +379,6 @@
 			isa = PBXGroup;
 			children = (
 				F458B53A1A5E5E3000C8A02E /* Public */,
-				F458B5211A5E2A1500C8A02E /* ViewModelClass.h */,
-				F458B5221A5E2A1500C8A02E /* ViewModelClass.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -417,6 +425,8 @@
 		F458B53A1A5E5E3000C8A02E /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				F459D5212067C3030062BD05 /* PublicCellViewModel.h */,
+				F459D5222067C3030062BD05 /* PublicCellViewModel.m */,
 				F458B52A1A5E333800C8A02E /* PublicWeiboViewModel.h */,
 				F458B52B1A5E333800C8A02E /* PublicWeiboViewModel.m */,
 			);
@@ -528,7 +538,7 @@
 			files = (
 				F4354CE91EC893B800632603 /* UIView+WebCacheOperation.m in Sources */,
 				F4354CB01EC8910F00632603 /* AFURLSessionManager.m in Sources */,
-				F458B5231A5E2A1500C8A02E /* ViewModelClass.m in Sources */,
+				F458B5231A5E2A1500C8A02E /* SuperModelClass.m in Sources */,
 				F4354CE71EC893B800632603 /* UIImageView+HighlightedWebCache.m in Sources */,
 				F43A1C4A1A5BB91A00B327FB /* AppDelegate.m in Sources */,
 				F458B52C1A5E333800C8A02E /* PublicWeiboViewModel.m in Sources */,
@@ -541,6 +551,7 @@
 				F4354CF11EC8AF9800632603 /* PublicCell.m in Sources */,
 				F4354CE21EC893B800632603 /* SDWebImagePrefetcher.m in Sources */,
 				F4354CE81EC893B800632603 /* UIImageView+WebCache.m in Sources */,
+				F459D5232067C3030062BD05 /* PublicCellViewModel.m in Sources */,
 				F43A1CBF1A5BC94B00B327FB /* NetRequestClass.m in Sources */,
 				F458B5351A5E469500C8A02E /* PublicModel.m in Sources */,
 				F4354CE41EC893B800632603 /* UIImage+GIF.m in Sources */,
@@ -557,6 +568,7 @@
 				F4354CE31EC893B800632603 /* UIButton+WebCache.m in Sources */,
 				F4354CAD1EC8910F00632603 /* AFSecurityPolicy.m in Sources */,
 				F4354CDA1EC893B800632603 /* MKAnnotationView+WebCache.m in Sources */,
+				F459D5262067C8F10062BD05 /* PublicListModel.m in Sources */,
 				F4354CE01EC893B800632603 /* SDWebImageDownloaderOperation.m in Sources */,
 				F4354CAF1EC8910F00632603 /* AFURLResponseSerialization.m in Sources */,
 				F458B5381A5E5AB800C8A02E /* PublicDetailViewController.m in Sources */,

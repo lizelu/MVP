@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PublicModel.h"
+#import "PublicCellViewModel.h"
 
 @interface PublicCell : UITableViewCell
-- (void)setValueWithDic:(PublicModel *) publicModel;
+
+- (void)bindCellViewModel:(PublicCellViewModel *) cellViewModel;
+
 @end

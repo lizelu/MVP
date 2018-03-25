@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#include "PublicModel.h"
+#include "PublicCellViewModel.h"
 
 @interface PublicDetailViewController : UIViewController
-@property (strong, nonatomic) PublicModel *publicModel;
+@property (strong, nonatomic) PublicCellViewModel *cellItem;
 @end

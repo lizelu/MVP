@@ -6,23 +6,22 @@
 //  Copyright (c) 2015年 李泽鲁. All rights reserved.
 //
 
-#import "ViewModelClass.h"
-#import "PublicModel.h"
+#import <Foundation/Foundation.h>
+#import "PublicCellViewModel.h"
+@interface PublicWeiboViewModel : NSObject
 
-@interface PublicWeiboViewModel : ViewModelClass
+@property (strong, nonatomic) ReturnValueBlock returnBlock;
+@property (strong, nonatomic) ErrorCodeBlock errorBlock;
+@property (strong, nonatomic) FailureBlock failureBlock;
 
+
+// 传入交互的Block块
+- (void)setBlockWithReturnBlock: (ReturnValueBlock) returnBlock
+                 WithErrorBlock: (ErrorCodeBlock) errorBlock
+               WithFailureBlock: (FailureBlock) failureBlock;
 /**
  获取围脖列表
  */
 - (void)fetchPublicWeiBo;
 
-
-/**
- 跳转到微博详情页
-
- @param publicModel
- @param superController 
- */
-- (void) weiboDetailWithPublicModel:(PublicModel *) publicModel
-                 WithViewController:(UIViewController *)superController;
 @end

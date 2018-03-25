@@ -9,5 +9,8 @@
 #import "PublicModel.h"
 
 @implementation PublicModel
-
+- (void)dealloc
+{
+    DDLog(@"PublicModel - 释放");
+}
 @end

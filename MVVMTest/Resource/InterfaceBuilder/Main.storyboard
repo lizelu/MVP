@@ -1,15 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2RS-dn-1kR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="SPj-08-kjr">
+            <objects>
+                <viewController id="3kN-og-6bJ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sN4-6Y-8y4"/>
+                        <viewControllerLayoutGuide type="bottom" id="O66-tY-PW3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O2p-em-SJe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFm-Nn-jsZ">
+                                <rect key="frame" x="149" y="155" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="查看共微博"/>
+                                <connections>
+                                    <segue destination="hvi-o9-1Ab" kind="show" id="vdD-ez-YcS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j3U-0f-BOR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kMQ-5U-E1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="945.87706146926541"/>
+        </scene>
         <!--Public Table View Controller-->
         <scene sceneID="Dc9-ux-HR1">
             <objects>
@@ -23,7 +52,7 @@
                                 <rect key="frame" x="0.0" y="22" width="375" height="222"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZAF-a3-gBM" id="rc5-zx-csD">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="221.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="221.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tJd-Sc-bWA">
@@ -34,7 +63,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1w-hp-BFy">
-                                            <rect key="frame" x="115" y="26" width="217" height="21"/>
+                                            <rect key="frame" x="115" y="26" width="216" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="dkk-e0-e7A"/>
                                             </constraints>
@@ -43,7 +72,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKy-m6-xXu">
-                                            <rect key="frame" x="115" y="65" width="217" height="21"/>
+                                            <rect key="frame" x="115" y="65" width="216" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="5cP-Nb-JB6"/>
                                             </constraints>
@@ -52,7 +81,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FtM-fA-VeE">
-                                            <rect key="frame" x="30" y="112" width="312" height="89"/>
+                                            <rect key="frame" x="30" y="112" width="311" height="89"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -91,7 +120,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uql-E4-PPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457" y="951"/>
+            <point key="canvasLocation" x="1796" y="950.37481259370327"/>
         </scene>
         <!--Public Detail View Controller-->
         <scene sceneID="bTG-FF-i0Q">
@@ -163,25 +192,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBP-b3-zmx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2080" y="951"/>
+            <point key="canvasLocation" x="2418.4000000000001" y="950.37481259370327"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="L5E-rX-SzB">
+        <scene sceneID="ZGY-Vn-Y1w">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2RS-dn-1kR" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="464-XZ-Jyk" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="m4M-sj-jvx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LSk-NX-iBU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="hvi-o9-1Ab" kind="relationship" relationship="rootViewController" id="Raf-mC-lV3"/>
+                        <segue destination="3kN-og-6bJ" kind="relationship" relationship="rootViewController" id="u5P-FA-BiC"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vJD-og-bGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fys-Bj-lq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826" y="951"/>
+            <point key="canvasLocation" x="793.60000000000002" y="945.4272863568217"/>
         </scene>
     </scenes>
 </document>

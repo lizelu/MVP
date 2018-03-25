@@ -1,14 +1,15 @@
 //
-//  PublicModel.h
+//  PublicCellItem.h
 //  MVVMTest
 //
-//  Created by 李泽鲁 on 15/1/8.
-//  Copyright (c) 2015年 李泽鲁. All rights reserved.
+//  Created by lizelu on 2018/3/25.
+//  Copyright © 2018年 李泽鲁. All rights reserved.
 //
 
-#import "SuperModelClass.h"
+#import <Foundation/Foundation.h>
+#import "PublicModel.h"
 
-@interface PublicModel : SuperModelClass
+@interface PublicCellViewModel : NSObject
 
 @property (strong, nonatomic) NSString *userId;
 @property (strong, nonatomic) NSString *weiboId;
@@ -16,5 +17,7 @@
 @property (strong, nonatomic) NSURL *imageUrl;
 @property (strong, nonatomic) NSString *date;
 @property (strong, nonatomic) NSString *text;
+@property (assign, nonatomic) CGFloat cellHeight;
 
+- (instancetype)initWithModel:(PublicModel *)model;
 @end
