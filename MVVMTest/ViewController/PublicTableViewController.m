@@ -14,7 +14,7 @@
 @interface PublicTableViewController ()
 
 @property (copy, nonatomic) NSArray<PublicCellViewModel *> *publicModelArray;
-
+@property (strong, nonatomic) PublicWeiboViewModel *publicViewModel;
 @end
 
 @implementation PublicTableViewController
@@ -30,9 +30,10 @@
  创建ViewModel
  */
 - (void)createViewModel {
-    PublicWeiboViewModel *publicViewModel = [[PublicWeiboViewModel alloc] init];
-    [publicViewModel setBlockWithReturnBlock:^(id returnValue, WeboRequsetType requestType) {
-        [self handelRequestData:returnValue reqeustType:requestType];
+    self.publicViewModel = [[PublicWeiboViewModel alloc] init];
+    __weak typeof(self) weak_self = self;
+    [self.publicViewModel setBlockWithReturnBlock:^(id returnValue, WeboRequsetType requestType) {
+        [weak_self handelRequestData:returnValue reqeustType:requestType];
     } WithErrorBlock:^(id errorCode) {
         [SVProgressHUD dismiss];
     } WithFailureBlock:^{
@@ -40,20 +41,27 @@
     }];
 
     
-    [publicViewModel fetchPublicWeiBo];
+    [self.publicViewModel fetchPublicWeiBo];
     [SVProgressHUD showWithStatus:@"正在获取用户信息……" maskType:SVProgressHUDMaskTypeBlack];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.publicViewModel otherDataFetch];
+    });
+    
 }
 
 -(void)handelRequestData:(id)returnValue reqeustType:(WeboRequsetType)type {
+    [SVProgressHUD dismiss];
+    
     switch (type) {
         case ListRequest:
-            [SVProgressHUD dismiss];
             _publicModelArray = returnValue;
             [self.tableView reloadData];
             break;
         
         case Other:
             //处理其他数据返回的情况，一个VC对应一个VM, 一个VM可能对应多个数据处理结果
+            [SVProgressHUD showSuccessWithStatus:returnValue];
             break;
             
         default:

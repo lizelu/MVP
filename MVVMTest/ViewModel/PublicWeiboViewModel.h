@@ -10,7 +10,7 @@
 #import "PublicCellViewModel.h"
 typedef NS_ENUM (NSInteger, WeboRequsetType) {
     ListRequest,
-    Other
+    Other //扩充
 };
 typedef void (^ReturnValueBlockType) (id returnValue, WeboRequsetType);
 @interface PublicWeiboViewModel : NSObject
@@ -28,5 +28,11 @@ typedef void (^ReturnValueBlockType) (id returnValue, WeboRequsetType);
  获取围脖列表
  */
 - (void)fetchPublicWeiBo;
+
+
+/**
+ 其他数据处理
+ */
+-(void)otherDataFetch;
 
 @end

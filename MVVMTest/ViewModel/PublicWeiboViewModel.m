@@ -35,7 +35,11 @@
     }];
     [model fetchPublicWeiBo];
 }
-;
+
+- (void)otherDataFetch {
+     self.returnBlock(@"其他数据处理", Other);
+}
+
 /**
  获取到正确的数据，对正确的数据进行处理
 
